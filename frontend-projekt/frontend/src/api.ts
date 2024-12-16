@@ -1,5 +1,5 @@
 interface ApiResponse {
-    message: string; // Az API válaszainak struktúrája
+    message: string;
   }
   
   const API_URL = 'http://localhost:3000';

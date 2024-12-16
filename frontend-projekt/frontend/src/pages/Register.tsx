@@ -10,6 +10,7 @@ function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(email)
     try {
       await register(username, password, email);
       navigate('/protected');

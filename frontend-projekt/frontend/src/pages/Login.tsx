@@ -12,7 +12,7 @@ function Login() {
     e.preventDefault();
     try {
       await login(username, password, email);
-      navigate('/protected'); // Sikeres bejelentkezés után navigálás a privát oldalra
+      navigate('/protected');
     } catch (error) {
       alert('Login failed');
     }
