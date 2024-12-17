@@ -98,6 +98,31 @@ app.get('/protected', (req, res) => {
   res.json({ message: `Üdvözöllek, ${req.session.user.username}` });
 });
 
+app.get('/products', async (req, res) => {
+  const page = parseInt(req.query.page) || 1;
+  const limit = parseInt(req.query.limit) || 5;
+  const offset = (page - 1) * limit;
+
+  try {
+    const [[{ total }]] = await db.query('SELECT COUNT(*) AS total FROM products');
+  
+    const [rows] = await db.query('SELECT * FROM products LIMIT ? OFFSET ?', [limit, offset]);
+
+    const totalPages = Math.ceil(total / limit);
+
+    res.json({
+      data: rows,
+      currentPage: page,
+      totalPages: totalPages,
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Szerver hiba a termékek lekérésekor!' });
+  }
+});
+
+
 app.listen(3000, () => {
   console.log('Server is running on http://localhost:3000');
 });
+

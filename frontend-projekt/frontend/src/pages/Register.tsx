@@ -21,7 +21,9 @@ function Register() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2>Register</h2>
+      <a href="/login">Bejelentkezés</a>
+      <a href="/products">Vissza a főoldalra</a>
+      <h2>Regisztráció</h2>
       <input
         type="text"
         placeholder="Felhasználónév"

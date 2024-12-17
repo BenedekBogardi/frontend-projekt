@@ -19,28 +19,48 @@ function Login() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Login</h2>
-      <input
-        type="text"
-        placeholder="Felhasználónév"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      /><br /><br />
-      <input
-        type="password"
-        placeholder="Jelszó"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      /><br /><br />
-      <input
-        type="email"
-        placeholder="E-mail cím"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      /><br /><br />
-      <button type="submit">Bejelentkezés</button>
-    </form>
+    <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
+      <div className="card shadow-sm p-4" style={{ maxWidth: "400px", width: "100%" }}>
+        <h2 className="text-center mb-4">Bejelentkezés</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label htmlFor="username" className="form-label">Felhasználónév</label>
+            <input
+              type="text"
+              className="form-control"
+              id="username"
+              placeholder="Felhasználónév"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="password" className="form-label">Jelszó</label>
+            <input
+              type="password"
+              className="form-control"
+              id="password"
+              placeholder="Jelszó"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="email" className="form-label">E-mail cím</label>
+            <input
+              type="email"
+              className="form-control"
+              id="email"
+              placeholder="E-mail cím"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <button type="submit" className="btn btn-primary w-100">Bejelentkezés</button>
+        </form>
+      </div>
+    </div>
+
   );
 }
 

@@ -51,4 +51,12 @@ interface ApiResponse {
     }
     return await response.json();
   };
+
+  export const fetchProducts = async (): Promise<ApiResponse> => {
+    const response = await fetch(`${API_URL}/products`, {
+      method: 'GET',
+      credentials: 'include',
+    });
+    return await response.json();
+  };
   
