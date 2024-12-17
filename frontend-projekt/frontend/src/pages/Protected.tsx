@@ -93,9 +93,18 @@ const Protected = () => {
 
     return (
         <div className="container mt-5">
-            <a href="/logout">Kijelentkezés</a>&nbsp;&nbsp;
-            <a href="/products">Vissza a főoldalra</a>&nbsp;&nbsp;
-            <a href="/profil">Saját profil</a>
+            <div className="d-flex justify-content-center my-3">
+                <a href="/logout" className="btn btn-danger me-2">
+                    Kijelentkezés
+                </a>
+                <a href="/products" className="btn btn-primary me-2">
+                    Vissza a főoldalra
+                </a>
+                <a href="/profil" className="btn btn-secondary">
+                    Saját profil
+                </a>
+            </div>
+
             <h1 className="text-center mb-4">Terméklista</h1>
             <form className="mb-4">
                 <label>
@@ -105,7 +114,7 @@ const Protected = () => {
                         value={searchTerm}
                         onChange={handleSearch}
                         className="form-control"
-                        placeholder="Kategória, név vagy ár alapján..   ."
+                        placeholder="Kategória, név vagy ár alapján..."
                     /><br /><br />
                 </label>
             </form>
@@ -128,8 +137,8 @@ const Protected = () => {
                                 <h5 className="card-title">{product.name}</h5>
                                 <p className="card-text">Kategória: {product.category}</p>
                                 <p className="card-text">Ár: {product.price} Ft</p>
-                                <p className="card-text">Raktáron: {product.onStock ? 'Igen' : 'Nem'}</p>
-                                {product.onStock? <button>Vásárlás</button> : 'Sajnos a termék jelenleg nem áll rendelkezésre.'}
+                                <p className="card-text">Raktáron: {product.onStock ? 'Jelenleg elérhető' : 'Jelenleg nem érhető el.'}</p>
+                                {product.onStock ? 'Sajnos a termék jelenleg nem áll rendelkezésre.' : <button>Kosárba</button>}
                             </div>
                         </div>
                     </div>

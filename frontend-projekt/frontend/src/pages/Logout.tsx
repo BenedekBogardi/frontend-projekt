@@ -22,4 +22,3 @@ function Logout() {
 }
 
 export default Logout;
-//faaz

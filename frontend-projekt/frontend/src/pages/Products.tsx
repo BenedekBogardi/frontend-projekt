@@ -93,8 +93,15 @@ const Products = () => {
 
     return (
         <div className="container mt-5">
-            <a href="/login">Bejelentkezés</a>
-            <a href="/register">Regisztráció</a>
+            <div className="d-flex justify-content-center my-3">
+                <a href="/login" className="btn btn-primary me-2">
+                    Bejelentkezés
+                </a>
+                <a href="/register" className="btn btn-success">
+                    Regisztráció
+                </a>
+            </div>
+
             <h1 className="text-center mb-4">Terméklista</h1>
             <form className="mb-4">
                 <label>

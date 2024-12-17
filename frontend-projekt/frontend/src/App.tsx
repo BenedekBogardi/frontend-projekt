@@ -5,7 +5,9 @@ import Register from './pages/Register';
 import Logout from './pages/Logout';
 import Products from './pages/Products';
 import Protected from './pages/Protected';
+import Profile from './pages/Profile';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
 
@@ -17,9 +19,10 @@ function App() {
         <Route path="/logout" element={<Logout />} />
         <Route path="/products" element={<Products />} />
         <Route path="/protected" element={<Protected />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
-  </Router>
-);
+    </Router>
+  );
 }
 
 export default App

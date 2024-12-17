@@ -121,6 +121,18 @@ app.get('/products', async (req, res) => {
   }
 });
 
+app.get('/profile', async (req, res) => {
+  try{
+    const [row] = await db.query('SELECT * FROM users WHERE user_id = ?');
+
+  res.json({
+    data: row
+  });
+  }catch(error) {
+    console.error(error)
+    res.status(500).json({ message: 'Szerver hiba a felhasználó lekérésekor!'})
+  }
+});
 
 app.listen(3000, () => {
   console.log('Server is running on http://localhost:3000');
