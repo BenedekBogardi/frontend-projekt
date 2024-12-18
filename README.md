@@ -18,7 +18,7 @@ Ugyan nem kérte a tanárúr, de én így oldottam meg, külön végponttal.
 
 "/cart": Sajnos a tudásomat meghaladta ez a végpont.
 
-
+Bootstrapet alkalmaztam egyedi stílus megjelenítéséhez.
 
 FONTOS:
 A feliratozott gombokkal minden végpont elérhető (természetesen egyes oldalak csak bejelentkezés után), így az URL-ben nem szükséges átírogatás.
