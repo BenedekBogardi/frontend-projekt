@@ -14,7 +14,7 @@ function Login() {
       await login(username, password, email);
       navigate('/protected');
     } catch (error) {
-      alert('Login failed');
+      alert('Sikertelen bejelentkezés! Ellenőrizze a bevitt adatokat!');
     }
   };
 

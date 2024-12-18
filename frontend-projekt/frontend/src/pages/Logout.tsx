@@ -9,9 +9,9 @@ function Logout() {
     const handleLogout = async () => {
       try {
         await logout();
-        navigate('/login');
+        navigate('/');
       } catch (error) {
-        alert('Logout failed');
+        alert('Sikertelen kijelentkezés!');
       }
     };
 

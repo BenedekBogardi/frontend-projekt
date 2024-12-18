@@ -54,7 +54,7 @@ export const fetchProtected = async (): Promise<ApiResponse> => {
 
 export const fetchProducts = async (): Promise<ApiResponse> => {
   const response = await fetch(`${API_URL}/products`, {
-    method: 'GET',
+    method: 'POST',
     credentials: 'include',
   });
   return await response.json();

@@ -15,7 +15,7 @@ function Register() {
       await register(username, password, email);
       navigate('/protected');
     } catch (error) {
-      alert('Registration failed');
+      alert('Sikertelen regisztráció!');
     }
   };
 
@@ -25,7 +25,7 @@ function Register() {
       <a href="/login" className="btn btn-primary me-2">
                     Bejelentkezés
                 </a>
-                <a href="/products" className="btn btn-success">
+                <a href="/" className="btn btn-success">
                     Vissza a főoldalra
                 </a>
       </div>

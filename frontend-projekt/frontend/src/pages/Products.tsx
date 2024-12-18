@@ -31,6 +31,7 @@ const Products = () => {
                 return response.json();
             })
             .then((data) => {
+                console.log(data)
                 setProducts(data.data);
                 setCurrentPage(data.currentPage);
                 setTotalPages(data.totalPages);
@@ -137,7 +138,7 @@ const Products = () => {
                                 <h5 className="card-title">{product.name}</h5>
                                 <p className="card-text">Kategória: {product.category}</p>
                                 <p className="card-text">Ár: {product.price} Ft</p>
-                                <p className="card-text">Raktáron: {product.onStock ? 'Igen' : 'Nem'}</p>
+                                <p className="card-text">Raktáron: {product.onStock ? 'Jelenleg elérhető' : 'Jelenleg nem érhető el.'}</p>
                             </div>
                         </div>
                     </div>

@@ -13,7 +13,7 @@ const Home = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
-    const fetchCheapestProducts = () => {
+    const fetchProducts = () => {
         setLoading(true);
         setError(null);
 
@@ -35,7 +35,7 @@ const Home = () => {
     };
 
     useEffect(() => {
-        fetchCheapestProducts();
+        fetchProducts();
     }, []);
 
     if (loading) {
