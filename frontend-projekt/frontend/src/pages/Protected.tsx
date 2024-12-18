@@ -97,10 +97,10 @@ const Protected = () => {
                 <a href="/logout" className="btn btn-danger me-2">
                     Kijelentkezés
                 </a>
-                <a href="/products" className="btn btn-primary me-2">
+                <a href="/LoggedInHome" className="btn btn-primary me-2">
                     Vissza a főoldalra
                 </a>
-                <a href="/profil" className="btn btn-secondary">
+                <a href="/profile" className="btn btn-secondary">
                     Saját profil
                 </a>
             </div>
@@ -138,7 +138,7 @@ const Protected = () => {
                                 <p className="card-text">Kategória: {product.category}</p>
                                 <p className="card-text">Ár: {product.price} Ft</p>
                                 <p className="card-text">Raktáron: {product.onStock ? 'Jelenleg elérhető' : 'Jelenleg nem érhető el.'}</p>
-                                {product.onStock ? 'Sajnos a termék jelenleg nem áll rendelkezésre.' : <button>Kosárba</button>}
+                                {product.onStock ? <button>Kosárba</button> : <p>Sajnos a termék jelenleg nem áll rendelkezésre.</p>}
                             </div>
                         </div>
                     </div>

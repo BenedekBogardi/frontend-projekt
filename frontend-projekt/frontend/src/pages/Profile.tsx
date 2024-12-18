@@ -18,8 +18,7 @@ export default function Profile(){
     const fetchProfile=()=>{
         setLoading(true);
         setError(null);
-
-        fetch(`http://localhost:3000/profile`)
+        fetch('http://localhost:3000/profile')
         .then((response) => {
             if (response.status === 404) {
                 setErrorServer('A kért erőforrás nem található (404)!');
@@ -38,7 +37,7 @@ export default function Profile(){
         })
     };
 
-    const handleLogin = (username: string, password: string) => {
+    const handleLogin = (username: string, password: string, email: string) => {
         setLoading(true);
         setError(null);
 
@@ -47,7 +46,7 @@ export default function Profile(){
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({ username, password, email }),
       })
         .then((response) => {
           if (!response.ok) {
@@ -71,7 +70,7 @@ export default function Profile(){
       }, [loggedIn]);
     
       if (!loggedIn) {
-        <Login/>
+        <Login  />
     };
 
     return (
@@ -81,7 +80,7 @@ export default function Profile(){
           {errorServer && <p style={{ color: "red" }}>{errorServer}</p>}
           {profile && (
             <div>
-              <h1>Helló, {profile.name}</h1>
+              <h1>Helló, {profile.username}</h1>
               <p>Email: {profile.email}</p>
             </div>
           )}

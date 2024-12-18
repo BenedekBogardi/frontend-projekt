@@ -92,10 +92,13 @@ const Products = () => {
     }
 
     return (
-        <div className="container mt-5">
+        <div className="container mt-5 bg-light p-4">
             <div className="d-flex justify-content-center my-3">
                 <a href="/login" className="btn btn-primary me-2">
                     Bejelentkezés
+                </a>
+                <a href="/" className="btn btn-secondary me-2">
+                    Vissza a főoldalra
                 </a>
                 <a href="/register" className="btn btn-success">
                     Regisztráció

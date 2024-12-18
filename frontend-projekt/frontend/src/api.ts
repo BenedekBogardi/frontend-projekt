@@ -67,3 +67,11 @@ export const fetchProfile = async (): Promise<ApiResponse> => {
   });
   return await response.json();
 };
+
+export const fetchLoggedInHome = async (): Promise<ApiResponse> => {
+  const response = await fetch(`${API_URL}/LoggedInHome`, {
+    method: 'GET',
+    credentials: 'include',
+  });
+  return await response.json();
+};

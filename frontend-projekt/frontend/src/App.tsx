@@ -7,6 +7,8 @@ import Products from './pages/Products';
 import Protected from './pages/Protected';
 import Profile from './pages/Profile';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Home from './pages/Home';
+import LoggedInHome from './pages/LoggedInHome';
 
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
   return (
     <Router>
       <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/LoggedInHome" element={<LoggedInHome />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/logout" element={<Logout />} />

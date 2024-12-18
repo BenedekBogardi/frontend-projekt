@@ -57,9 +57,6 @@ function Login() {
             />
           </div>
           <button type="submit" className="btn btn-primary w-100">Bejelentkezés</button><br /><br/>
-          <a href="/products" className="btn btn-primary w-100">
-                    Vissza a főoldalra
-                </a>
         </form>
       </div>
     </div>

@@ -8,7 +8,7 @@ export interface Product {
     onStock: boolean;
 }
 
-const Home = () => {
+const LoggedInHome = () => {
     const [products, setProducts] = useState<Product[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -49,14 +49,11 @@ const Home = () => {
     return (
         <div className="container mt-5 bg-light p-4">
             <div className="d-flex justify-content-center my-3">
-                <a href="/login" className="btn btn-primary me-2">
-                    Bejelentkezés
-                </a>
-                <a href="/products" className="btn btn-secondary me-2">
+                <a href="/protected" className="btn btn-secondary me-2">
                     Termékek
                 </a>
                 <a href="/register" className="btn btn-success">
-                    Regisztráció
+                    Kijelentkezés
                 </a>
             </div>
     
@@ -106,4 +103,4 @@ const Home = () => {
     
 };
 
-export default Home;
+export default LoggedInHome;
