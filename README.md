@@ -8,7 +8,8 @@ Végpontok, melyek itthoni tesztelésben működtek:
 
 "/products": a termékek listázása, rendezés lehetséges, 5-10-20 termék megjelenítése oldalanként, keresés, kiírja az oldal, hogy van-e raktáron.
 
-"/protected": sikeres bejelentkezés esetén ide navigál az oldal. Ugyanaz, mint a "/products" oldal, ám itt van megjelenik egy "Kosárba" gomb is, amennyiben a termék raktáron van.
+"/protected": sikeres bejelentkezés esetén ide navigál az oldal. Ugyanaz, mint a "/products" oldal, ám itt megjelenik egy "Kosárba" gomb is, amennyiben a termék raktáron van.<br>
+Ugyan nem kérte a tanárúr, de én így oldottam meg, külön végponttal.
   Amennyiben nincs raktáron a termék, a megjelenő szöveg: Sajnos a termék jelenleg nem áll rendelkezésre.
   
 "/logout": ugyan nem kérte a tanár úr, annyit hozzátettem, hogy visszadobjon a login oldalra, ha a kijelentkezésre nyomunk.
